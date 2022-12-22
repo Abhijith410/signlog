@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp page</title>
+    <link rel="stylesheet" href="{% static 'sign.css' %}">
+</head>
+<body>
+    <div class="container signup1">
+        <form action="{% url '3rd' %}" method="get" id="myform">
+            <h1>Sign Up</h1>
+            <div class="input">
+                <label for="">First Name*</label>
+                <input type="text" name="" id="fname">
+                <span id="namerror"></span>
+            </div>
+            <div class="input">
+                <label for="">Last Name</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="input">
+                <label for="">E-Mail*</label>
+                <input type="email" name="" id="email">
+                <span id="emailerror"></span>
+            </div>
+            <div class="input">
+                <label for="">Mobile*</label>
+                <input type="tel" name="" id="mob">
+                <span id="phonerror"></span>
+            </div>
+            <div class="input">
+                <label for="">Password*</label>
+                <input type="password" name="" id="pwd">
+                <span id="passerror"></span>
+            </div>
+            <div class="input">
+                <label for="">Confirm Password*</label>
+                <input type="password" name="" id="cnfpwd">
+                <span id="conferror"></span>
+            </div>
+            <button onclick="return reg_validate()">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="{% static 'signn.js' %}"></script>
+</body>
+</html>
